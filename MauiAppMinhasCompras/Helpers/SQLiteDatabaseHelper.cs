@@ -45,7 +45,7 @@ namespace MauiAppMinhasCompras.Helpers
         public Task<List<Produto>> Search(string q) //Método Search implementa uma funcionalidade de busca na tabela Produto do BDS SQLite,
                                                     //pode filtrar registros com uma string fornecida
         {
-            string sql = "SELECT * Produto WHERE descricao LIKE '%" + q + "%'";
+            string sql = "SELECT * FROM Produto WHERE descricao LIKE '%" + q + "%'";
             return _conn.QueryAsync<Produto>(sql);
         }
 
